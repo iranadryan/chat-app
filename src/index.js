@@ -10,7 +10,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
 
-app.use(express.static(path.resolve(__dirname, '..', 'uploads')));
+app.use(express.static(path.resolve(__dirname, '..', 'public')));
 
 io.on('connection', (socket) => {
   console.log('New WebSocket connection');
